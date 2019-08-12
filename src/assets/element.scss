@@ -1,0 +1,78 @@
+@import './layout.scss';
+
+// button
+@mixin btn($size: 14px, $color: #fff, $bgColor: #f04752, $padding: 5px, $radius: 5px) {
+    font-size: $size;
+    color: $color;
+    background-color: $bgColor;
+    border: 1px solid $bgColor;
+    border-radius: $radius;
+    padding: $padding;
+    line-height: 1;
+    text-align: center;
+    display: inline-block;
+}
+
+// back icon
+@mixin backIcon($width: 0, $size: 6px, $color: #5d5f6a, $rotate: 45deg) {
+    text-align: center;
+    &:before{
+        content: '';
+        width: .6rem;
+        height: .6rem;
+        border-left: 2px solid $color;
+        border-bottom: 2px solid $color;
+        transform: rotate($rotate);
+        display: inline-block;
+        box-sizing: border-box;
+    }
+}
+
+// more icon
+@mixin more($width: 3px, $size: 10px, $color: #5d5f6a) {
+    position: relative;
+    &:before{
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        vertical-align: middle;
+        width: $width;
+        height: $width;
+        border-radius: $width;
+        background-color: $color;
+        box-shadow: $size 0 0 $color, -$size 0 0 $color;
+    }
+}
+
+// text overflow
+@mixin txtOverflow($width: 100%, $display: block) {
+    width: $width;
+    display: $display;
+    white-space: nowrap;
+    -ms-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+// tabulation layout
+@mixin list($direction: column) {
+    @include flex($direction);
+}
+
+// panel layout
+@mixin panel($color: #333, $bgColor: #fff, $padding: 0, $margin: 10px 0, $height: 56px, $txtPadding: 0 16px, $fontSize: 16px) {
+    background-color: $bgColor;
+    padding: $padding;
+    margin: $margin;
+    >h4{
+        height: $height;
+        line-height: $height;
+        // padding: $txtPadding;
+        text-align: center;
+        color: $color;
+        font-size: $fontSize;
+        font-weight: 600;
+        @include txtOverflow;
+    }
+}
