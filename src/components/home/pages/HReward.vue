@@ -20,7 +20,7 @@ export default {
                     src: 'https://img12.360buyimg.com/jrpmobile/jfs/t26893/316/1416172900/5740/58f20b1e/5bc82e3aN7aa90a89.png?width=210&height=260'
                 },
                 {
-                    href: 'BorrowMoney',
+                    href: 'Home',
                     src: 'https://img12.360buyimg.com/jrpmobile/jfs/t26767/72/1365822552/8516/2e071d95/5bc82e6eN0be93809.png?width=210&height=260'
                 },
                 {
