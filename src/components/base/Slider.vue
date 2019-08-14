@@ -2,7 +2,7 @@
     <section :class="cname">
         <swiper :options="options" :not-next-tick="options.notNextTick">
             <swiper-slide v-for="(item, i) in items" :key="i">
-                <router-link :to="{name: item.href}">
+                <router-link :to="item.href">
                     <img :src="item.src">
                 </router-link>
             </swiper-slide>
@@ -24,7 +24,8 @@ export default {
                     loop: true,//是否轮回播放（最后一张播放完了后，是否再循环到第一张播放）
                     notNextTick: false,// notNextTick是一个组件自有属性，如果notNextTick设置为true，组件则不会通过NextTick来实例化swiper，也就意味着你可以在第一时间获取到swiper对象，假如你需要刚加载遍使用获取swiper对象来做什么事，那么这个属性一定要是true
                     pagination: {
-                        el: '.swiper-pagination'
+                        el: '.swiper-pagination',
+                        clickable: true
                     }
                 }
             }

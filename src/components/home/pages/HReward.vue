@@ -1,9 +1,7 @@
 <template>
-    <article class="reward">
-        <Panel cname="rewardSection" title="赏金任务">
-            <slider :items="sliderData" :options="sliderOption" cname="slider" />
-        </Panel>
-    </article>
+    <Panel cname="reward" title="赏金任务">
+        <slider :items="sliderData" :options="sliderOption" cname="slider" />
+    </Panel>
 </template>
 
 <script>
@@ -34,9 +32,9 @@ export default {
             ],
             sliderOption: {
                 autoplay: false,
-                loop: false,
                 slidesPerView: 2.5,
-                spaceBetween: 12
+                spaceBetween: 12,
+                freeMode: true //设置为true则变为free模式，slide会根据惯性滑动可能不止一格且不会贴合
             }
         };
     },
@@ -50,7 +48,6 @@ export default {
 <style lang="scss" scoped>
     .reward{
         padding-bottom: 1.5rem;
-        background-color: #fff;
         /deep/ .swiper-slide{
             width: 125px !important;
             font-size: 0;

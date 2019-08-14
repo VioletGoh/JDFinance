@@ -12,7 +12,7 @@ export default new Router({
     routes: [
         {
             path: '/',
-            redirect: Home
+            redirect: '/Home'
         },
         {
             path: '/home',

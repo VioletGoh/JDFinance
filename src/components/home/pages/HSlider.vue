@@ -1,7 +1,5 @@
 <template>
-    <div class="hSlider">
-        <slider :items="sliderData" cname="slider"/>
-    </div>
+    <slider :items="sliderData" cname="hSlider"/>
 </template>
 
 <script>
@@ -28,24 +26,21 @@ export default {
 
 <style lang="scss" scoped>
     .hSlider{
-        background-color: #fff;
-        .slider{
-            height: 43vw;//轮播图片宽高等比缩放
-            overflow: hidden;
-            /deep/ .swiper-slide{
-                a{
+        height: 43vw;//轮播图片宽高等比缩放
+        overflow: hidden;
+        /deep/ .swiper-slide{
+            a{
+                display: block;
+                img{
+                    width: 100%;
                     display: block;
-                    img{
-                        width: 100%;
-                        display: block;
-                    }
                 }
             }
-            /deep/ .swiper-pagination{
-                .swiper-pagination-bullet-active{
-                    background-color: #fff;
-                    opacity: .8;
-                }
+        }
+        /deep/ .swiper-pagination{
+            .swiper-pagination-bullet-active{
+                background-color: #fff;
+                opacity: .8;
             }
         }
     }

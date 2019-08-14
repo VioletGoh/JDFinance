@@ -1,15 +1,13 @@
 <template>
-    <article class="icon">
-        <Panel cname="iconList"/>
-            <ul>
-                <li v-for="(item, i) in iconList" :key="i">
-                    <div class="img"><img :src="item.imgUrl" :alt="item.title"></div>
-                    <p class="title">{{ item.title }}</p>
-                    <p class="desc" v-if="item.desc">{{ item.desc }}</p>
-                </li>
-            </ul>
-        </Panel>
-    </article>
+    <Panel cname="icon">
+        <ul>
+            <li v-for="(item, i) in iconList" :key="i">
+                <div class="img"><img :src="item.imgUrl" :alt="item.title"></div>
+                <p class="title">{{ item.title }}</p>
+                <p class="desc" v-if="item.desc">{{ item.desc }}</p>
+            </li>
+        </ul>
+    </Panel>
 </template>
 
 <script>
@@ -63,18 +61,14 @@ export default {
 <style lang="scss" scoped>
     @import '~style/element.scss';
     .icon{
-        background-color: #fff;
-        &List{
-            margin: 0;
-            /deep/ h4{
-                display: none;
-            }
+        margin: 0;
+        /deep/ h4{
+            display: none;
         }
         ul{
             padding-bottom: 1rem;
             @include list(row);
             li{
-                // flex: 1;
                 width: 25%;
                 padding-top: 1rem;
                 text-align: center;

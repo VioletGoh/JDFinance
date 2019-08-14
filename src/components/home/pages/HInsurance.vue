@@ -1,9 +1,7 @@
 <template>
-    <article class="insurance">
-        <Panel cname="insuranceSection" title="保险保障">
-            <slider :items="sliderData" :options="sliderOption" cname="slider" />
-        </Panel>
-    </article>
+    <Panel cname="insurance" title="保险保障">
+        <slider :items="sliderData" :options="sliderOption" cname="slider" />
+    </Panel>
 </template>
 
 <script>
@@ -38,9 +36,9 @@ export default {
             ],
             sliderOption: {
                 autoplay: false,
-                loop: false,
                 slidesPerView: 2.5,
-                spaceBetween: 12
+                spaceBetween: 12,
+                freeMode: true
             }
         }
     },
@@ -54,7 +52,6 @@ export default {
 <style lang="scss" scoped>
     .insurance{
         padding-bottom: 1.5rem;
-        background-color: #fff;
         /deep/ .swiper-slide{
             width: 125px !important;
             font-size: 0;
