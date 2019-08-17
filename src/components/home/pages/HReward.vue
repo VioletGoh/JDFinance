@@ -1,5 +1,6 @@
 <template>
     <Panel cname="reward" title="赏金任务">
+        <span class="moreTask">查看更多任务</span>
         <slider :items="sliderData" :options="sliderOption" cname="slider" />
     </Panel>
 </template>
@@ -46,8 +47,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+    @import '~style/element.scss';
     .reward{
         padding-bottom: 1.5rem;
+        position: relative;
+        .moreTask{
+            color: #999;
+            font-size: .7rem;
+            position: absolute;
+            top: 1.05rem;
+            right: 0;
+            padding-right: .6rem;
+            margin-right: 1rem;
+            cursor: pointer;
+            @include backIcon($size: .5rem, $line: 1px, $color: #e2e2e2, $rotate: 225deg);
+            &:before{
+                position: absolute;
+                top: 50%;
+                right: 0;
+                margin-top: -.25rem;
+            }
+        }
         /deep/ .swiper-slide{
             width: 125px !important;
             font-size: 0;

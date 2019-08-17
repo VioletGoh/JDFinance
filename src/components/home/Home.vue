@@ -6,6 +6,8 @@
         <HIcon/>
         <HReward/>
         <HInsurance/>
+        <HCrowdFunding/>
+        <Footor/>
     </div>
 </template>
 
@@ -14,6 +16,7 @@ import HSlider from './pages/HSlider';
 import HIcon from './pages/HIcon';
 import HReward from './pages/HReward';
 import HInsurance from './pages/HInsurance';
+import HCrowdFunding from './pages/HCrowdFunding';
 
 export default {
     name: "Home",
@@ -26,7 +29,8 @@ export default {
         HSlider,
         HIcon,
         HReward,
-        HInsurance
+        HInsurance,
+        HCrowdFunding
     }
 };
 </script>

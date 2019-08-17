@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import Heador from '@/public/Heador';
+// import Heador from '@/public/Heador';
 
 export default {
     name: "BorrowMoney",
@@ -17,7 +17,7 @@ export default {
         }
     },
     components: {
-        Heador
+        // Heador
     }
 };
 </script>

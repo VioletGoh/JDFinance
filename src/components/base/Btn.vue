@@ -24,6 +24,6 @@ export default {
 <style lang="scss">
     @import '~style/element.scss';
     .btn{
-        @include btn;
+        // @include btn;
     }
 </style>

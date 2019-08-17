@@ -83,6 +83,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       name: 'vendor',
       minChunks (module) {
         // any required modules inside node_modules are extracted to vendor
+        // __dirname是node提供的环境变量，表示当前路径
         return (
           module.resource &&
           /\.js$/.test(module.resource) &&

@@ -9,14 +9,15 @@ import 'swiper/dist/css/swiper.css';
 
 import Heador from './components/public/Heador';
 import Navbar from './components/public/Navbar';
-import Footor from './components/public/Footor';
+import Footor from './components/public/Footor/Footor';
 
 Vue.config.productionTip = false;
 
 // import global public components
-Vue.component(Heador.name,Heador);
-Vue.component(Navbar.name,Navbar);
-Vue.use(Footor);
+Vue.component(Heador.name, Heador);
+Vue.component(Navbar.name, Navbar);
+Vue.component(Footor.name, Footor);
+// Vue.use(Footor);
 
 /* eslint-disable no-new */
 new Vue({

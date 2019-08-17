@@ -35,6 +35,7 @@ export default {
         top: 0;
         width: 100%;
         z-index: 9999;
+        color: #333;
         background-color: #fff;
         .preIcon, .moreICon{
             width: 2.2rem;

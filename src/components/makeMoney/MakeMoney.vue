@@ -2,12 +2,13 @@
     <div class="makeMoney pubMargin">
         <Heador title="赚钱"></Heador>
         <Navbar/>
-        <div>赚钱</div>
+        <MSlider/>
     </div>
 </template>
 
 <script>
-import Heador from '@/public/Heador';
+// import Heador from '@/public/Heador';
+import MSlider from './pages/MSlider';
 
 export default {
     name: "MakeMoney",
@@ -17,7 +18,8 @@ export default {
         }
     },
     components: {
-        Heador
+        // Heador
+        MSlider
     }
 };
 </script>
