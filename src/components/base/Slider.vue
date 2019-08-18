@@ -6,6 +6,14 @@
                     <img :src="item.src">
                 </router-link>
             </swiper-slide>
+            <!-- <swiper-slide v-for="(val, i) in itemsTxt" :key="i">
+                <router-link :to="val.href">
+                    <p>{{ val.title }}</p>
+                    <Btn v-if="val.btnTxt" :cname="val.btnTxt">{{ val.btnTxt }}</Btn>
+                    <p v-if="val.sum">{{ val.sum }}</p>
+                    <p v-if="val.desc">{{ val.desc }}</p>
+                </router-link>
+            </swiper-slide> -->
             <div class="swiper-pagination" slot="pagination" v-if="options.pagination"></div>
         </swiper>
     </section>
@@ -36,6 +44,12 @@ export default {
                 return {}
             }
         },
+        // itemsTxt: {
+        //     type: Array,
+        //     default() {
+        //         return {}
+        //     }
+        // },
         cname: {
             type: String,
             default: ''

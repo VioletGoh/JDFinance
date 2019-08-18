@@ -62,9 +62,6 @@ export default {
         z-index: 999;
         margin: 0;
         box-shadow: 0 -3px 4px rgba(0,0,0,.03);
-        /deep/ h4{
-            display: none;
-        }
         ul{
             @include list(row);
             li{

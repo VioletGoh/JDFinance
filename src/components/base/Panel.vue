@@ -1,6 +1,7 @@
 <template>
     <section :class="[panelClass, cname]">
-        <h4>-&nbsp;{{ title }}&nbsp;-</h4>
+        <h4 v-if="title">-&nbsp;{{ title }}&nbsp;-</h4>
+        <h3 v-else>{{ titleLeft }}</h3>
         <slot/>
     </section>
 </template>
@@ -13,6 +14,10 @@ export default {
             default: ''
         },
         title: {
+            type: String,
+            default: ''
+        },
+        titleLeft: {
             type: String,
             default: ''
         }

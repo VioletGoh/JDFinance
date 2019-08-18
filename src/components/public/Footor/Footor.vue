@@ -31,9 +31,6 @@ export default {
     @import '~style/element.scss';
     .footer{
         background-color: #f5f5f5;
-        /deep/ h4{
-            display: none;
-        }
         ul{
             li{
                 color: #999;

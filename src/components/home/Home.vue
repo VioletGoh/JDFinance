@@ -37,6 +37,5 @@ export default {
 
 <style lang="scss">
     .home{
-        // margin: 2.25rem auto 2.5rem;
     }
 </style>

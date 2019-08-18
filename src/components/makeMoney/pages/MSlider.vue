@@ -1,7 +1,7 @@
 <template>
     <Panel cname="mSlider">
         <slider :items="list" cname="slider"/>
-        <div class="assetsWrap">
+        <div class="assets">
             <Btn cname="level">会员等级</Btn>
             <router-link class="txt" to="" tag="div">立即登录 马上赚钱！</router-link>
             <Btn cname="sign">签到</Btn>
@@ -50,9 +50,7 @@ export default {
     @import '~style/element.scss';
     .mSlider{
         padding-bottom: 1rem;
-        /deep/ h4{
-            display: none;
-        }
+        margin-top: 0;
         /deep/ .swiper-slide{
             a{
                 display: block;
@@ -75,17 +73,16 @@ export default {
                 border-radius: .2rem;
             }
         }
-        .assetsWrap{
+        .assets{
             height: 3.25rem;
             margin: -.4rem .8rem 0;
             border-radius: .1rem;
-            box-shadow: 0 0 .5rem .25rem rgba(101, 118, 155, .15);
+            box-shadow: 0 0 .5rem .025rem rgba(101, 118, 155, .15);
             z-index: 10;
             background-color: #fff;
             position: relative;
             .level{
-                @include btn($height: 1.65rem, $size: .45rem, $padding: 0 .25rem, $bgColor: linear-gradient(to bottom right, #fbde9b 15%, #debe82, #ae905e 75%), $radius: .1rem);
-                border: 0;
+                @include btn($height: 1.65rem, $size: .45rem, $padding: 0 .25rem, $bgColor: linear-gradient(to bottom right, #fbde9b 15%, #debe82, #ae905e 75%), $radius: .1rem, $line: 0);
                 box-shadow: 0 0.15rem 0.2rem 0 hsla(41, 44%, 63%, .51);
                 position: absolute;
                 top: 50%;
@@ -101,8 +98,7 @@ export default {
                 margin: 0 4.25rem 0 2.8rem;
             }
             .sign{
-                @include btn($height: 1.65rem, $size: .6rem, $padding: 0 1.15rem, $bgColor: linear-gradient(to right, #f0d598, #af9260), $radius: 1.65rem);
-                border: 0;
+                @include btn($height: 1.65rem, $size: .6rem, $padding: 0 1.15rem, $bgColor: linear-gradient(to right, #f0d598, #af9260), $radius: 1.65rem, $line: 0);
                 box-shadow: 0 0.2rem 0.3rem 0 hsla(40, 41%, 61%, .41);
                 position: absolute;
                 top: 50%;

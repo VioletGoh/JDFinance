@@ -1,19 +1,22 @@
 <template>
-    <Panel cname="reward" title="赏金任务">
+    <Panel cname="reward" titleLeft="赏金任务">
+        <!-- <h3>赏金任务<span class="moreTask">查看更多任务</span></h3> -->
         <span class="moreTask">查看更多任务</span>
-        <slider :items="sliderData" :options="sliderOption" cname="slider" />
+        <slider :items="rewardData" :options="rewardOption" cname="slider" />
+        <div class="banner"><img src="https://img12.360buyimg.com/jrpmobile/jfs/t1/7640/35/4322/21318/5bda6023E656cbbbb/b2ddefd7ef80d7aa.png?width=750&height=200"></div>
+        <div class="banner"><img src="https://img12.360buyimg.com/jrpmobile/jfs/t1/37697/16/1334/187953/5cb44c65E5dbefe83/200ce71a4347aeec.png?width=750&height=200"></div>
     </Panel>
 </template>
 
 <script>
-import Panel from "@/base/Panel";
-import Slider from "@/base/Slider";
+import Panel from '@/base/Panel';
+import Slider from '@/base/Slider';
 
 export default {
-    name: "HReward",
+    name: 'MReward',
     data() {
         return {
-            sliderData: [
+            rewardData: [
                 {
                     href: 'Vip',
                     src: 'https://img12.360buyimg.com/jrpmobile/jfs/t26893/316/1416172900/5740/58f20b1e/5bc82e3aN7aa90a89.png?width=210&height=260'
@@ -31,43 +34,66 @@ export default {
                     src: 'https://img12.360buyimg.com/jrpmobile/jfs/t26182/297/1417522782/7864/19181a3b/5bc82ec0N0824153d.png?width=210&height=260'
                 }
             ],
-            sliderOption: {
+            rewardOption: {
                 autoplay: false,
                 slidesPerView: 2.5,
-                spaceBetween: 12,
+                spaceBetween: 8,
                 freeMode: true //设置为true则变为free模式，slide会根据惯性滑动可能不止一格且不会贴合
             }
-        };
+        }
     },
     components: {
         Panel,
         Slider
     }
-};
+}
 </script>
 
 <style lang="scss" scoped>
     @import '~style/element.scss';
     .reward{
-        padding-bottom: 1.5rem;
+        // padding-bottom: 1rem;
+        background-color: #f5f5f5;
         position: relative;
+        /deep/ h3{
+            height: 3rem;
+            line-height: 3rem;
+            // font-size: .9rem;
+            // padding: 0 .75rem;
+            background-color: #fff;
+        }
         .moreTask{
             color: #999;
-            font-size: .7rem;
+            font-size: .6rem;
+            font-weight: 600;
             position: absolute;
-            top: 1.05rem;
+            top: 1.2rem;
             right: 0;
             padding-right: .6rem;
-            margin-right: 1rem;
+            margin-right: .75rem;
             cursor: pointer;
-            @include backIcon($size: .5rem, $line: 1px, $color: #e2e2e2, $rotate: 225deg, $top: 50%, $mgrTop: -.25rem);
+            @include backIcon($size: .4rem, $line: .1rem, $color: #999, $rotate: 225deg, $top: 50%, $mgrTop: -.2rem);
             &:before{
                 position: absolute;
                 right: 0;
             }
         }
+        .slider{
+            padding-bottom: .4rem;
+            background-color: #fff;
+        }
+        .banner{
+            font-size: 0;
+            padding-bottom: 1rem;
+            margin-bottom: .5rem;
+            background-color: #fff;
+            img{
+                width: 100%;
+                display: block;
+            }
+        }
         /deep/ .swiper-slide{
-            width: 6.25rem !important;
+            width: 5.25rem !important;
             font-size: 0;
             &:first-child{
                 margin-left: .8rem;

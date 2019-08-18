@@ -126,9 +126,6 @@ export default {
                     }
                 }
             }
-            /deep/ h4{
-                display: none;
-            }
             ul{
                 li{
                     height: 2.8rem;
@@ -163,12 +160,10 @@ export default {
                             position: absolute;
                             right: .8rem;
                             padding: 0 .8rem 0 .5rem;
-                            @include backIcon($size: .5rem, $line: 1px, $color: #e2e2e2, $rotate: 225deg);
+                            @include backIcon($size: .5rem, $line: 1px, $color: #e2e2e2, $rotate: 225deg, $top: 50%, $mgrTop: -.25rem);
                             &:before{
                                 position: absolute;
-                                top: 50%;
                                 right: 0;
-                                margin-top: -.25rem;
                             }
                         }
                     }

@@ -24,6 +24,6 @@ export default {
 
 <style lang="scss" scoped>
     .saveMoney{
-        margin: 2.25rem auto 2.5rem;
+        // margin: 2.25rem auto 2.5rem;
     }
 </style>

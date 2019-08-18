@@ -1,13 +1,13 @@
 @import './layout.scss';
 
 // button
-@mixin btn($height: auto, $size: .7rem, $color: #fff, $bgColor: #f04752, $line: #f04752, $padding: .25rem, $radius: .25rem) {
+@mixin btn($height: auto, $size: .7rem, $color: #fff, $bgColor: #f04752, $lineColor: #f04752, $line: 1px, $padding: .25rem, $radius: .25rem) {
     height: $height;
     line-height: $height;
     font-size: $size;
     color: $color;
     background: $bgColor;
-    border: 1px solid $line;
+    border: $line solid $lineColor;
     border-radius: $radius;
     padding: $padding;
     // line-height: 1;
@@ -17,7 +17,7 @@
 }
 
 // back icon
-@mixin backIcon($width: 0, $size: .6rem, $line: 2px, $color: #5d5f6a, $rotate: 45deg) {
+@mixin backIcon($width: 0, $size: .6rem, $line: 2px, $color: #5d5f6a, $rotate: 45deg, $top: 0, $mgrTop: 0) {
     text-align: center;
     &:before{
         content: '';
@@ -28,6 +28,8 @@
         transform: rotate($rotate);
         display: inline-block;
         box-sizing: border-box;
+        top: $top;
+        margin-top: $mgrTop;
     }
 }
 
@@ -94,5 +96,10 @@
         font-size: $fontSize;
         font-weight: 600;
         @include txtOverflow;
+    }
+    >h3{
+        font-size: .9rem;
+        font-weight: 700;
+        padding: 0 .75rem;
     }
 }

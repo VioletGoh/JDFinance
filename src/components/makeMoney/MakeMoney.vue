@@ -3,12 +3,21 @@
         <Heador title="赚钱"></Heador>
         <Navbar/>
         <MSlider/>
+        <MIcon/>
+        <MReward/>
+        <MBank/>
+        <HWhitebar/>
+        <MInvestment/>
     </div>
 </template>
 
 <script>
-// import Heador from '@/public/Heador';
 import MSlider from './pages/MSlider';
+import MIcon from './pages/MIcon';
+import MReward from './pages/MReward';
+import MBank from './pages/MBank';
+import HWhitebar from './pages/HWhitebar';
+import MInvestment from './pages/MInvestment';
 
 export default {
     name: "MakeMoney",
@@ -18,14 +27,18 @@ export default {
         }
     },
     components: {
-        // Heador
-        MSlider
+        MSlider,
+        MIcon,
+        MReward,
+        MBank,
+        HWhitebar,
+        MInvestment
     }
 };
 </script>
 
 <style lang="scss" scoped>
     .makeMoney{
-        // margin: 2.25rem auto 2.5rem;
+
     }
 </style>

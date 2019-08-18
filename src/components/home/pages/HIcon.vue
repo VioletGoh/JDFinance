@@ -62,9 +62,6 @@ export default {
     @import '~style/element.scss';
     .icon{
         margin: 0;
-        /deep/ h4{
-            display: none;
-        }
         ul{
             padding-bottom: 1rem;
             @include list(row);
