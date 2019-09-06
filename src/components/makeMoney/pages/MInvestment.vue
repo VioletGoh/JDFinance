@@ -77,14 +77,11 @@ export default {
 <style lang="scss" scoped>
     @import '~style/element.scss';
     .investment{
-        // padding-bottom: .625rem;
         padding: 6rem 0 .625rem;
         position: relative;
         /deep/ h3{
             height: 3rem;
             line-height: 3rem;
-            // font-size: .9rem;
-            // padding: 0 .75rem;
             margin-bottom: -.375rem;
         }
         .moreTask{
@@ -140,7 +137,6 @@ export default {
                 }
                 .btnTxt{
                     @include btn($height: .8rem, $size: .5rem, $padding: 0 .25rem, $bgColor: linear-gradient(#5e8fff, #2f6fff), $radius: .55rem, $line: 0);
-                    // background-color: linear-gradient(#5e8fff, #2f6fff);
                 }
                 .sum{
                     height: 1.5rem;

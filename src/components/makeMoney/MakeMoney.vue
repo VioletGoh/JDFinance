@@ -8,6 +8,7 @@
         <MBank/>
         <HWhitebar/>
         <MInvestment/>
+        <HInsurance/>
     </div>
 </template>
 
@@ -18,6 +19,7 @@ import MReward from './pages/MReward';
 import MBank from './pages/MBank';
 import HWhitebar from './pages/HWhitebar';
 import MInvestment from './pages/MInvestment';
+import HInsurance from './pages/HInsurance';
 
 export default {
     name: "MakeMoney",
@@ -32,7 +34,8 @@ export default {
         MReward,
         MBank,
         HWhitebar,
-        MInvestment
+        MInvestment,
+        HInsurance
     }
 };
 </script>
